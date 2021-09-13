@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    /*### Primary*/
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    /*### Neutral*/
+    --Dark-gray: hsl(0, 0%, 59%);
+    /*sizes*/
+    --radius: 15px;
+}
+
+body {
+    background-color: var(--Dark-cyan);
+    /*text*/
+    font-family: 'Kumbh Sans', sans-serif;
+    /*flex*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*size*/
+    height: 100vh;
+    width: 100vw;
+    /*space*/
+    margin: 0;
+}
+
+.main-container {
+    background-color: white;
+    border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
+    /*size*/
+    width: fit-content;
+    /*box-shadow*/
+    --Very-dark-desaturated-blue-transparent: hsl(229, 23%, 23%, 0.5);
+    box-shadow: 0px 15px 30px 0px var(--Very-dark-desaturated-blue-transparent);
+    /*space*/
+    margin-left: 6.4vw;
+    margin-right: 6.4vw;
+}
+
+#feature-img {
+    border-radius: var(--radius) var(--radius) 0 0;
+    /*image*/
+    background-image: url(../images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*size*/
+    width: 350px;
+    width: calc(350px / 1.067);
+    height: 140px;
+    /*space*/
+    margin: auto;
+}
+
+.person-box {
+    /*text*/
+    text-align: center;
+    /*postion*/
+    position: relative;
+    bottom: 50px;
+    /*space*/
+    /*correct the white space from postion relative*/
+    margin-bottom: -50px;
+}
+
+#profile-img {
+    border: 5px solid white;
+    border-radius: 50%;
+    /*image*/
+    background-image: url(../images/image-victor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*size*/
+    width: 96px;
+    height: 96px;
+    /*space*/
+    margin: auto;
+}
+
+.title-name {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 19px;
+    font-weight: 700;
+    /*space*/
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 16px;
+}
+
+#age {
+    /*text*/
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+}
+
+.city {
+    /*text*/
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: 14px;
+    /*space*/
+    margin: 0;
+    padding-bottom: 28px;
+}
+
+.achievements-box {
+    border-top: 1px solid var(--Dark-gray);
+    /*text*/
+    text-align: center;
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /*space*/
+    padding-top: 30px;
+    padding-bottom: 27px;
+}
+
+.number-title {
+    /*text*/
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    font-size: 18px;
+    /*space*/
+    margin: 0;
+}
+
+.number-text {
+    /*text*/
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+
+/* ----bg images---- */
+
+.top-circle {
+    /*image*/
+    background-image: url(../images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*size*/
+    width: 978px;
+    height: 978px;
+    /*space*/
+    margin: 0;
+    /*position*/
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.bottom-circle {
+    /*image*/
+    background-image: url(../images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*size*/
+    width: 978px;
+    height: 978px;
+    /*space*/
+    margin: 0;
+    /*position*/
+    position: fixed;
+    z-index: -1;
+    transform: translate(45%, 50%);
+}
+
+
+/*###Frontend Mentor###*/
+
+.attribution {
+    padding-top: 25px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+    color: white;
+}
+
+
+/*##### Desktop #####*/
+
+@media screen and (min-width: 1025px) {
+    #feature-img {
+        /*size*/
+        width: 350px;
+        height: 140px;
+    }
+    .title-name {
+        /*space*/
+        padding-top: 23px;
+    }
+}
+
+
+/*#####  mobile in landscape mode #####*/
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body {
+        /*space*/
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .bottom-circle {
+        transform: translate(40%, 40%);
+    }
+}
+
+
+/*##### old mobile #####*/
+
+@media screen and (max-width: 370px) {
+    #feature-img {
+        /*size*/
+        width: calc(350px / 1.3);
+    }
+}
